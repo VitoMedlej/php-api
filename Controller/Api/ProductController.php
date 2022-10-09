@@ -11,7 +11,8 @@ try {
         if ($requestMethod === 'GET') {
             
             $Product = new ProductModel();
-            print_r($Product);
+            print_r($Product );
+            echo "<br>";
             $a = $Product->getProducts(1);
             print("ffoo $a ");
         }

@@ -8,8 +8,10 @@ class ProductModel extends Database {
             if (isset($connection)) {
                 
                 $stmt = $connection->prepare("SELECT * FROM `products` ");
-                $products = $stmt->fetch();
+                $stmt->execute();
+                $products = $stmt->fetchAll();
                 echo 'wtf';
+                print_r($products);
                 return $products;
             }
         }
